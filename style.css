@@ -1,35 +1,47 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
 
-*{
+/* Resetting default margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
 }
-nav{
+
+/* Styling for the navigation bar */
+nav {
     background-color: rgba(14, 11, 17, 0.774);
     color: white;
     height: 65px;
-    font-size:27px;
-    display:flex;
+    font-size: 27px;
+    display: flex;
     align-items: center;
     padding: 0 12px;
     font-family: 'Roboto', sans-serif;
 }
-nav ul{
+
+/* Styling for the navigation list */
+nav ul {
     list-style-type: none;
 }
-.gameContainer{ 
+
+/* Styling for the main game container */
+.gameContainer {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.container{
+
+/* Styling for the grid container */
+.container {
     display: grid;
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
-.box{
+
+/* Styling for individual boxes in the grid */
+.box {
     border: 2px solid black;
     font-size: 8vw;
     cursor: pointer;
@@ -38,44 +50,51 @@ nav ul{
     align-items: center;
 }
 
-.box:hover{
+/* Hover effect for boxes */
+.box:hover {
     background-color: rgb(242, 234, 250);
 }
 
+/* Styling for information text */
 .info {
     font-size: 22px;
 }
 
-.gameInfo{
+/* Styling for additional game information */
+.gameInfo {
     padding: 0 34px;
     font-family: 'Baloo Bhaina 2', cursive;
 }
 
-.gameInfo h1{
+/* Styling for game title */
+.gameInfo h1 {
     font-size: 2.5rem;
 }
 
-.imgbox img{
+/* Styling for image box */
+.imgbox img {
     width: 0;
     transition: width 1s ease-in-out;
 }
 
-.br-0{
+/* Border utility classes */
+.br-0 {
     border-right: 0;
 }
 
-.bl-0{
+.bl-0 {
     border-left: 0;
 }
 
-.bt-0{
+.bt-0 {
     border-top: 0;
 }
 
-.bb-0{
+.bb-0 {
     border-bottom: 0;
 }
 
+/* Styling for reset button */
 #reset {
     margin: 0 23px;
     padding: 1px 18px;
@@ -87,7 +106,8 @@ nav ul{
     font-weight: bolder;
 }
 
-.line{
+/* Styling for the winning line */
+.line {
     background-color: black;
     height: 3px;
     width: 0;
@@ -96,18 +116,18 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
-@media screen and (max-width: 950px)
-{
-    .gameContainer{
+/* Responsive design for screens with a maximum width of 950px */
+@media screen and (max-width: 950px) {
+    .gameContainer {
         flex-wrap: wrap;
     }
-    .gameInfo{
+    .gameInfo {
         margin-top: 34px;
     }
-    .gameInfo h1{
+    .gameInfo h1 {
         font-size: 1.5rem;
     }
-    .container { 
+    .container {
         grid-template-rows: repeat(3, 20vw);
         grid-template-columns: repeat(3, 20vw);
     }
